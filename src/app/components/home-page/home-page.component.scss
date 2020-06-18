@@ -5,15 +5,29 @@
 .left-container {
     padding: 30px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #cccccc;
     height: 100vh!important;
+    // background: linear-gradient(45deg, white, #222222);
+    // background-size: 200% 200%;
+    // animation: gradient 1s ease forwards;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+	// 100% {
+	// 	background-position: 0% 50%;
+    // }
 }
 
 .right-container {
     background-color: #000000;
     padding: 200px 50px;
     height: 100vh!important;
-    color: white;
 }
 .profilePage {
     height: inherit;
@@ -22,7 +36,7 @@
 .title, .name, .role {
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 3px;
-    color: #737373;
+    color: #eeeeee;
 }
 .title {
     font-size: 18px;
@@ -41,11 +55,11 @@
     font-family: 'Source Sans Pro', sans-serif;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #151515;
+    background-color: #bfbfbf;
     padding: 20px 20px 20px 25px;
     margin-top: 50px;
     width: 150px;
-    color: #737373;
+    color: black;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 2px;
@@ -53,6 +67,7 @@
 }
 .lowerNavigationBox:hover {
     animation: increaseWidth 0.5s 1 forwards;
+    cursor: pointer;
 }
 
 @keyframes increaseWidth {
@@ -81,4 +96,10 @@
 .socialMediaIcon {
     max-height: 20px;
     max-width: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .left-container {
+        display: none;
+    }
 }
