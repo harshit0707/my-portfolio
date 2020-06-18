@@ -1,3 +1,28 @@
-<p>
-  home-page works!
-</p>
+<div fxLayout="row" fxLayoutAlign="start start" class="first-container">
+  <div class="left-container" fxFlex="30%">
+    <img class="profilePage" src="./../../../assets/images/Profile pic.svg">
+  </div>
+  <div class="right-container" fxFlex="70%">
+    <div>
+        <div class="title">THE PORFOLIO OF</div>
+        <div class="name">HARSHIT<br>AGRAWAL</div>
+        <div class="role">AN ASPIRING WEB DEVELOPER AND DATA ANALYST</div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="50px">
+      <div class="lowerNavigationBox">
+        <div>View my work</div>
+      </div>
+      <div class="lowerNavigationBox">
+        <div>Contact me</div>
+      </div>
+    </div>
+    <!-- <div class="socialMediaContainer" fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="start center">
+      <div class="iconContainer" *ngFor="let icon of iconList">
+        <a href="{{icon.link}}" target="_blank">
+          <img src="{{'./../../../assets/images/' + icon.fileName + '.svg'}}"
+            alt="{{icon.alternateName}}" class="socialMediaIcon">
+        </a>
+      </div>
+    </div> -->
+  </div>
+</div>

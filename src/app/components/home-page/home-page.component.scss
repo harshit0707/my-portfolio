@@ -1,0 +1,84 @@
+.first-container {
+    height: 100vh!important;
+}
+
+.left-container {
+    padding: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    height: 100vh!important;
+}
+
+.right-container {
+    background-color: #000000;
+    padding: 200px 50px;
+    height: 100vh!important;
+    color: white;
+}
+.profilePage {
+    height: inherit;
+    width: inherit;
+}
+.title, .name, .role {
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 3px;
+    color: #737373;
+}
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.name {
+    font-size: 75px;
+    line-height: 105%;
+}
+.role {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.lowerNavigationBox {
+    font-family: 'Source Sans Pro', sans-serif;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #151515;
+    padding: 20px 20px 20px 25px;
+    margin-top: 50px;
+    width: 150px;
+    color: #737373;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 150%;
+}
+.lowerNavigationBox:hover {
+    animation: increaseWidth 0.5s 1 forwards;
+}
+
+@keyframes increaseWidth {
+    from {width: 150px;font-size: 15px;}
+    to {width: 200px;font-size: 18px;}
+}
+
+.iconContainer {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius:50%;
+    padding: 11px 12px 9px 12px;
+    background: gray;
+    &:hover {
+        transform: rotateY(360deg);
+        animation: changeIconColor 1s 1 forwards;
+        cursor: pointer;
+    }
+}
+
+@keyframes changeIconColor {
+    from {opacity:1;}
+    50% {opacity:0.5;}
+    to {opacity:1;}
+}
+.socialMediaIcon {
+    max-height: 20px;
+    max-width: 20px;
+}
