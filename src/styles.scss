@@ -1,3 +1,8 @@
+$primary-color: #090909;
+$secondary-color: #bfbfbf;
+$primary-text-color: #bfbfbf;
+$secondary-text-color: #090909;
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 3px;
@@ -24,13 +29,28 @@ body {
 }
 
 .primary-button {
-    background-color: #bfbfbf;
-    color: black;
+    background-color: $secondary-color;
+    color: $secondary-text-color;
 }
 .secondary-button {
-    border: 1px solid #bfbfbf;
+    border: 1px solid $secondary-color;
     background-color: inherit;
-    color: #bfbfbf;
+    color: $primary-text-color;
+}
+
+.section-heading {
+    text-shadow: 2px 0 0 $secondary-text-color, -2px 0 0 $secondary-text-color, 0 2px 0 $secondary-text-color, 0 -2px 0 $secondary-text-color,
+        1px 1px $secondary-text-color, -1px -1px 0 $secondary-text-color, 1px -1px 0 $secondary-text-color, -1px 1px 0 $secondary-text-color;
+    font-family: 'Sigmar One', cursive;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    &::selection {
+        background-color: #444444;
+    }
+    &::-moz-selection {
+        background: #444444;
+    }
 }
 
 @media only screen and (max-width: 1007px) { // md devices
@@ -41,5 +61,20 @@ body {
     .button {
         // border-radius: 10px;
         padding: 10px 15px 10px 20px;
+    }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: linear-gradient($primary-color, $secondary-color, $primary-color);
+    border-radius: 7.5px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba($primary-color, 0.6);
+    border-radius: 7.5px;
+    &:hover {
+        background-color: rgba($primary-color, 0.8);
     }
 }
