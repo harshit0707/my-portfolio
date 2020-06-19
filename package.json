@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
     "core-js": "^2.5.4",
+    "rellax": "^1.12.1",
     "rxjs": "~6.5.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.10.3"
@@ -33,7 +34,8 @@
     "@angular/language-service": "~9.1.11",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
+    "@types/node": "^8.9.5",
+    "@types/rellax": "^1.7.3",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",

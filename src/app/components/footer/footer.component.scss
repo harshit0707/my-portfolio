@@ -1,0 +1,39 @@
+.footer-signature {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bolder;
+    font-size: 28px;
+    color: #dddddd;
+    margin-bottom: 25px!important;
+}
+.footer-copyright {
+    font-size: 15px;
+    color: #eeeeee;
+}
+.footer-container {
+    background-color: #090909;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.iconContainer {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius:50%;
+    padding: 11px 12px 9px 12px;
+    background: gray;
+    &:hover {
+        transform: rotateY(360deg);
+        animation: changeIconColor 1s 1 forwards;
+        cursor: pointer;
+    }
+}
+
+@keyframes changeIconColor {
+    from { opacity: 1; }
+    50% { opacity: 0.5; }
+    to { opacity: 1; }
+}
+.socialMediaIcon {
+    max-height: 20px;
+    max-width: 20px;
+}

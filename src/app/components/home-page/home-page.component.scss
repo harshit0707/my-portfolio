@@ -1,31 +1,40 @@
 .first-container {
     height: 100vh!important;
 }
-
+.second-container {
+    background-color: white;
+    padding: 1000px 0px;
+}
 .left-container {
     padding: 30px;
     text-align: center;
-    background-color: #cccccc;
+    background-color: #dddddd;
     height: 100vh!important;
-    // background: linear-gradient(45deg, white, #222222);
-    // background-size: 200% 200%;
-    // animation: gradient 1s ease forwards;
+    background: linear-gradient(45deg, white, #999999);
+    background-size: 50% 50%;
+    animation: gradient 15s ease infinite forwards;
 }
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
-	}
+		background-position: 0% 0%;
+    }
+    25% {
+        background-position: 0% 100%;
+    }
+	50% {
+		background-position: 100% 100%;
+    }
+    75% {
+        background-position: 100% 0%;
+    }
 	100% {
-		background-position: 100% 50%;
-	}
-	// 100% {
-	// 	background-position: 0% 50%;
-    // }
+		background-position: 0% 0%;
+    }
 }
 
 .right-container {
-    background-color: #000000;
+    background-color: #090909;
     padding: 200px 50px;
     height: 100vh!important;
 }
@@ -34,8 +43,6 @@
     width: inherit;
 }
 .title, .name, .role {
-    font-family: 'Source Sans Pro', sans-serif;
-    letter-spacing: 3px;
     color: #eeeeee;
 }
 .title {
@@ -52,50 +59,25 @@
 }
 
 .lowerNavigationBox {
-    font-family: 'Source Sans Pro', sans-serif;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #bfbfbf;
-    padding: 20px 20px 20px 25px;
+    padding: 15px 20px 15px 25px;
     margin-top: 50px;
-    width: 150px;
-    color: black;
+    width: fit-content;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 2px;
     line-height: 150%;
 }
+
 .lowerNavigationBox:hover {
     animation: increaseWidth 0.5s 1 forwards;
     cursor: pointer;
 }
 
 @keyframes increaseWidth {
-    from {width: 150px;font-size: 15px;}
-    to {width: 200px;font-size: 18px;}
-}
-
-.iconContainer {
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    border-radius:50%;
-    padding: 11px 12px 9px 12px;
-    background: gray;
-    &:hover {
-        transform: rotateY(360deg);
-        animation: changeIconColor 1s 1 forwards;
-        cursor: pointer;
-    }
-}
-
-@keyframes changeIconColor {
-    from {opacity:1;}
-    50% {opacity:0.5;}
-    to {opacity:1;}
-}
-.socialMediaIcon {
-    max-height: 20px;
-    max-width: 20px;
+    from { font-size: 15px; }
+    to { font-size: 18px; }
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,28 +1,27 @@
-<div fxLayout="row" fxLayoutAlign="start start" class="first-container">
-  <div class="left-container" fxFlex="30%">
-    <img class="profilePage" src="./../../../assets/images/Profile pic.svg">
-  </div>
-  <div class="right-container" fxFlex>
-    <div fxLayout="column" fxLayoutAlign="start start">
-        <div class="title">THE PORFOLIO OF</div>
-        <div class="name">HARSHIT<br>AGRAWAL</div>
-        <div class="role">AN ASPIRING WEB DEVELOPER AND DATA ANALYST</div>
+<div class="primary-container">
+  <div fxLayout="row" fxLayoutAlign="start start" class="first-container rellax" data-rellax-speed="5">
+    <div class="left-container" fxFlex="30%">
+      <img class="profilePage" src="./../../../assets/images/Profile pic.svg">
     </div>
-    <div fxLayout="row" fxLayoutGap="50px">
-      <div class="lowerNavigationBox">
-        <div>View my work</div>
+    <div class="right-container" fxFlex>
+      <div fxLayout="column" fxLayoutAlign="start start">
+          <div class="title">THE PORFOLIO OF</div>
+          <div class="name">HARSHIT<br>AGRAWAL</div>
+          <div class="role">AN ASPIRING WEB DEVELOPER AND DATA ANALYST</div>
       </div>
-      <div class="lowerNavigationBox">
-        <div>Contact me</div>
+      <div fxLayout="row" fxLayoutGap="50px" fxLayout.lt-sm="column">
+        <div class="lowerNavigationBox primary-button" fxLayout="row" fxLayoutAlign="start start">
+          <span>View my work</span>
+          <img src="./../../../assets/images/down-arrow.svg" height="25px" width="30px">
+        </div>
+        <div class="lowerNavigationBox secondary-button" fxLayout="row" fxLayoutAlign="start start"
+          (click)="scrollToElement('footer')">
+          <span>Contact me</span>
+          <img src="./../../../assets/images/down-arrow-light.svg" height="25px" width="30px">
+        </div>
       </div>
     </div>
-    <!-- <div class="socialMediaContainer" fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="start center">
-      <div class="iconContainer" *ngFor="let icon of iconList">
-        <a href="{{icon.link}}" target="_blank">
-          <img src="{{'./../../../assets/images/' + icon.fileName + '.svg'}}"
-            alt="{{icon.alternateName}}" class="socialMediaIcon">
-        </a>
-      </div>
-    </div> -->
   </div>
+
+  <div class="second-container"></div>
 </div>

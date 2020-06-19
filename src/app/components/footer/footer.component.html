@@ -1,0 +1,12 @@
+<div class="footer-container" fxLayout="column" fxLayoutGap="10px">
+    <div class="footer-signature">\/ Harshit /\</div>
+    <div fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="center center">
+        <div class="iconContainer" *ngFor="let icon of iconList">
+            <a href="{{icon.link}}" target="_blank">
+                <img src="{{'./../../../assets/images/' + icon.fileName + '.svg'}}"
+                alt="{{icon.alternateName}}" class="socialMediaIcon">
+            </a>
+        </div>
+    </div>
+    <div class="footer-copyright">@COPYRIGHT 2018 ALL RIGHTS RESERVED</div>
+</div>

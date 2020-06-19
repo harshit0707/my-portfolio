@@ -1,1 +1,5 @@
 <router-outlet></router-outlet>
+<app-footer id ="footer"></app-footer>
+<div *ngIf="displayScrollButton" class="scrollToTopButton" (click)=scrollToTop()>
+    <img src="./../assets/images/up-arrow.svg" height="25px" width="25px">
+</div>
