@@ -2,11 +2,10 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    color: $primary-text-color;
     letter-spacing: 3px;
 }
-p {
-    color: $primary-text-color;
-}
+
 .button {
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -34,14 +33,13 @@ p {
 .secondary-button {
     border: 1px solid $secondary-color;
     background-color: inherit;
-    color: $primary-text-color;
+    color: $tertiary-text-color;
 }
 
 .section-heading {
     text-shadow: 2px 0 0 $secondary-text-color, -2px 0 0 $secondary-text-color, 0 2px 0 $secondary-text-color, 0 -2px 0 $secondary-text-color,
         1px 1px $secondary-text-color, -1px -1px 0 $secondary-text-color, 1px -1px 0 $secondary-text-color, -1px 1px 0 $secondary-text-color;
     font-family: 'Sigmar One', cursive;
-    color: $lightest-text-color;
     font-size: 50px;
     font-weight: bolder;
     &::selection {

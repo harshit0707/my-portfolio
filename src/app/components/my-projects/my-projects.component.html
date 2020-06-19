@@ -1,1 +1,8 @@
-<p class="section-heading">PROJECTS</p>
+<p class="section-heading removeColor">PROJECTS</p>
+<div fxLayout="row wrap" fxLayoutGap="35px" fxLayoutAlign="start start" 
+    fxLayout.lt-sm="column" class="project-card-container">
+    <div class="project-card" *ngFor="let project of myProjects" fxFlex="31%">
+        <p>{{project.title}}</p>
+        <p>{{project.description}}</p>
+    </div>
+</div>
