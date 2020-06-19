@@ -1,15 +1,18 @@
+$first-container-height: 100vh!important;
+
 .first-container {
-    height: 100vh!important;
+    height: $first-container-height;
 }
 .second-container {
     background-color: white;
-    padding: 1000px 0px;
+    text-align: center;
+    font-weight: bold;
 }
 .left-container {
-    padding: 30px;
+    padding: 5vh;
     text-align: center;
     background-color: #dddddd;
-    height: 100vh!important;
+    height: $first-container-height;
     background: linear-gradient(45deg, white, #999999);
     background-size: 50% 50%;
     animation: gradient 15s ease infinite forwards;
@@ -35,12 +38,12 @@
 
 .right-container {
     background-color: #090909;
-    padding: 200px 50px;
-    height: 100vh!important;
+    padding: 40vh 0vw 10vh 10vw;
+    height: $first-container-height;
 }
 .profilePage {
-    height: inherit;
-    width: inherit;
+    height: 90vh;
+    width: 25vw;
 }
 .title, .name, .role {
     color: #eeeeee;
@@ -84,4 +87,10 @@
     .left-container {
         display: none;
     }
+}
+.top-curve-svg {
+    margin-top: -175px;
+}
+.bottom-curve-svg {
+    margin-bottom: -10px;
 }
