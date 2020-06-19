@@ -1,13 +1,12 @@
-$primary-color: #090909;
-$secondary-color: #bfbfbf;
-$primary-text-color: #bfbfbf;
-$secondary-text-color: #090909;
+@import './themes/dark-theme.scss';
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 3px;
 }
-
+p {
+    color: $primary-text-color;
+}
 .button {
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -42,14 +41,14 @@ body {
     text-shadow: 2px 0 0 $secondary-text-color, -2px 0 0 $secondary-text-color, 0 2px 0 $secondary-text-color, 0 -2px 0 $secondary-text-color,
         1px 1px $secondary-text-color, -1px -1px 0 $secondary-text-color, 1px -1px 0 $secondary-text-color, -1px 1px 0 $secondary-text-color;
     font-family: 'Sigmar One', cursive;
-    color: white;
+    color: $lightest-text-color;
     font-size: 50px;
     font-weight: bolder;
     &::selection {
-        background-color: #444444;
+        background: $highlight-text-color;
     }
     &::-moz-selection {
-        background: #444444;
+        background: $highlight-text-color;
     }
 }
 
@@ -59,7 +58,6 @@ body {
 
 @media only screen and (max-width: 600px) { // sm devices
     .button {
-        // border-radius: 10px;
         padding: 10px 15px 10px 20px;
     }
 }
