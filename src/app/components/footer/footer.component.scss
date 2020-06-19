@@ -28,6 +28,10 @@
     }
 }
 
+.iconsContainer {
+    margin: 0px 5vw;
+}
+
 @keyframes changeIconColor {
     from { opacity: 1; }
     50% { opacity: 0.5; }
@@ -36,4 +40,16 @@
 .socialMediaIcon {
     max-height: 20px;
     max-width: 20px;
+}
+
+@media only screen and (max-width: 600px) { // xs devices
+    .footer-signature {
+        font-size: 10vw;
+    }
+    .iconContainer, .footer-copyright {
+        padding: 2.5vw 3vw 1vw 3vw;
+    }
+    .footer-copyright {
+        font-size: 7vw;
+    }
 }

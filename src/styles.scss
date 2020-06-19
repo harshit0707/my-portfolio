@@ -3,6 +3,26 @@ body {
     letter-spacing: 3px;
 }
 
+.button {
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px 20px 15px 25px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 150%;
+    &:hover {
+        animation: increaseWidth 0.5s 1 forwards;
+        cursor: pointer;
+    }
+}
+
+@keyframes increaseWidth {
+    from { font-size: 15px; }
+    to { font-size: 18px; }
+}
+
 .primary-button {
     background-color: #bfbfbf;
     color: black;
@@ -11,4 +31,15 @@ body {
     border: 1px solid #bfbfbf;
     background-color: inherit;
     color: #bfbfbf;
+}
+
+@media only screen and (max-width: 1007px) { // md devices
+
+}
+
+@media only screen and (max-width: 600px) { // sm devices
+    .button {
+        // border-radius: 10px;
+        padding: 10px 15px 10px 20px;
+    }
 }

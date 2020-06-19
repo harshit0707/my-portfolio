@@ -7,12 +7,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    FooterComponent
+    FooterComponent,
+    MyProjectsComponent
   ],
   imports: [
     BrowserModule,
