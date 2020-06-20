@@ -1,9 +1,59 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// @import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+// @include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $my-portfolio-primary: mat-palette($mat-indigo);
+// $my-portfolio-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+// $my-portfolio-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+// $my-portfolio-theme: mat-light-theme($my-portfolio-primary, $my-portfolio-accent, $my-portfolio-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include angular-material-theme($my-portfolio-theme);
+
 @import './themes/dark-theme.scss';
+@import './themes/responsive-theme.scss';
+
+html, body { height: 100%; }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: $primary-text-color;
     letter-spacing: 3px;
+}
+p {
+    font-size: 18px;
+    margin: 5px 0px;;
+}
+h2, h3, h4, h5 {
+    margin: 8px 0px;
+}
+h2 {
+    font-size: 32px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 21px;
 }
 
 .button {
@@ -36,6 +86,16 @@ body {
     color: $tertiary-text-color;
 }
 
+.reverse-primary-button {
+    background-color: $primary-color;
+    color: $primary-text-color;
+}
+.reverse-secondary-button {
+    border: 1px solid $primary-color;
+    background-color: inherit;
+    color: $secondary-text-color;
+}
+
 .section-heading {
     text-shadow: 2px 0 0 $secondary-text-color, -2px 0 0 $secondary-text-color, 0 2px 0 $secondary-text-color, 0 -2px 0 $secondary-text-color,
         1px 1px $secondary-text-color, -1px -1px 0 $secondary-text-color, 1px -1px 0 $secondary-text-color, -1px 1px 0 $secondary-text-color;
@@ -57,6 +117,9 @@ body {
 @media only screen and (max-width: 600px) { // sm devices
     .button {
         padding: 10px 15px 10px 20px;
+    }
+    .section-heading {
+        font-size: 8vw;
     }
 }
 

@@ -1,0 +1,13 @@
+<div fxLayout="column" fxLayoutGap="20px" *ngIf="!formFilled">
+    <h3>Hey visitor, may I know your name ??</h3>
+    <form>
+        <input type="text" placeholder="Type here" class="identity-input" [ngClass]="{'shakeInput': addShakeInput}"
+            [ngModelOptions]="{standalone: true}" [(ngModel)]="visitorName" maxlength="20">
+    </form>
+    <div fxLayout="row" fxLayoutGap="25px" fxLayout.lt-sm="column" class="mtb-2"
+        fxLayoutGap.lt-sm="5vh" fxLayoutAlign.lt-sm="start start">
+        <div class="button reverse-primary-button" (click)=captureUserInfo()>This is me :)</div>
+        <div class="button reverse-secondary-button" (click)=closeDialog()>Continue anonymously</div>
+    </div>
+</div>
+<h2 *ngIf="formFilled" class="thanks">Thanks</h2>
