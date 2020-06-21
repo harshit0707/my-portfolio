@@ -1,8 +1,9 @@
 <div fxLayout="column" fxLayoutGap="20px" *ngIf="!formFilled">
-    <h3>Hey visitor, may I know your name ??</h3>
+    <h3>Hey there, may I know your name??</h3>
     <form>
         <input type="text" placeholder="Type here" class="identity-input" [ngClass]="{'shakeInput': addShakeInput}"
             [ngModelOptions]="{standalone: true}" [(ngModel)]="visitorName" maxlength="20">
+        <h6 *ngIf="!validName"> Please enter a valid name</h6>
     </form>
     <div fxLayout="row" fxLayoutGap="25px" fxLayout.lt-sm="column" class="mtb-2"
         fxLayoutGap.lt-sm="5vh" fxLayoutAlign.lt-sm="start start">

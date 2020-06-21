@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "title": "Mosaic Blogging Website",
+            "description": "My first project build during college. It\"s all about blogging, blobgging and blogging.",
+            "technologiesUsed": "HTML, CSS, JavaScript, JQuery, PHP, phpMyAdmin, SQL",
+            "githubLink": ""
+        },
+        {
+            "title": "Blockchain Healthcare System",
+            "description": "Healthcare system for patients built on ehthereum blockchain for anonymity and immutability.",
+            "technologiesUsed": "Ganache, web3.js, Metamask, Solidity, Angular 7",
+            "gitHubLink": ""
+        },
+        {
+            "title": "Online Portfolio",
+            "description": "The website which you are on currently!! It is work on progress.",
+            "technologiesUsed": "Angular 9, TypeScript",
+            "gitHubLink": ""
+        }
+    ]
+}

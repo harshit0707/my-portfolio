@@ -4,22 +4,42 @@
     color: white !important;
 }
 
-.project-card-container {
-    margin: 0px 40px;
+.project-card {
+    display: table;
+    width: 100%;
 }
 
-.project-card {
-    margin-bottom: 35px;
-    // text-align: justify;
-    padding: 25px;
-    background: rgba($primary-color, 0.9);
+.left-project-card {
+    width: 30%;
+    max-width: 30%;
+    display: table-cell;
+    vertical-align: top;
+    background: radial-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.95));
     &:hover {
         cursor: pointer;
-        // animation: gradientBackground 2s linear forwards;
+        // animation: gradientBackground 0.5s linear forwards;
     }
 }
 
+.right-project-card {
+    width: 70%;
+    max-width: 70%;
+    font-weight: bold;
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+    color: $primary-color;
+}
+
 @keyframes gradientBackground {
-    from {background: $secondary-color}
-    to {background: radial-gradient($secondary-color, rgba($primary-color, 0.5))}
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+.gitHubLink {
+    padding-bottom: 0.5px;
+    border-bottom: 1px solid rgba($primary-color, 0.5);
+    &:hover {
+        cursor: pointer;
+    }
 }

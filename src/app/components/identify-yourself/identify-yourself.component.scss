@@ -7,6 +7,7 @@
     border-bottom: 1px solid $primary-color;
     font-size: 18px;
     color: $primary-color;
+    width: 50%;
 }
 
 ::placeholder {
@@ -42,4 +43,10 @@
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@media only screen and (max-width: 600px) {
+    .identity-input {
+        width: 60vw;
+    }
 }

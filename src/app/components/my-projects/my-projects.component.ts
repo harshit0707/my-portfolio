@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import  *  as  data  from  './../../../assets/content/my-projects.json';
 
 @Component({
   selector: 'app-my-projects',
@@ -15,11 +16,7 @@ export class MyProjectsComponent implements OnInit {
   }
 
   initializeProjects() {
-    this.myProjects = [
-      {'title': 'Mosaic Blogging Website', 'description': 'My first project build during college. It\'s all about blogging, blobgging and blogging.'},
-      {'title': 'Blockchain Healthcare System', 'description': 'Healthcare system for patients built on ehthereum blockchain for anonymity and immutability.'},
-      {'title': 'Online Portfolio', 'description': 'The website which you are on currently!! It is work on progress.'}
-    ]
+    this.myProjects = data['projects'];
   }
 
 }

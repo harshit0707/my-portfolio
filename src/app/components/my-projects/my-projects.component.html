@@ -1,8 +1,14 @@
-<p class="section-heading removeColor">PROJECTS</p>
-<div fxLayout="row wrap" fxLayoutGap="35px" fxLayoutAlign="start start" 
-    fxLayout.lt-sm="column" class="project-card-container">
-    <div class="project-card" *ngFor="let project of myProjects" fxFlex="31%">
-        <h4>{{project.title}}</h4>
-        <p>{{project.description}}</p>
+<p class="section-heading removeColor mb-8">PROJECTS</p>
+<div class="project-card-container mrl-8 mb-8" fxLayout="column"
+    fxLayoutGap="40px" fxLayoutAlign="start start">
+    <div *ngFor="let project of myProjects" class="project-card">
+        <div class="left-project-card p-5">
+            <h4>{{project.title}}</h4>
+        </div>
+        <div class="right-project-card prl-5 ptb-0">
+            <h5 [innerHTML]="project.description"></h5>
+            <h6>Technologies used: {{project.technologiesUsed}}</h6>
+            <h6>Check it out on <span class="gitHubLink">GitHub</span></h6>
+        </div>
     </div>
 </div>
