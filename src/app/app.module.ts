@@ -12,6 +12,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 import { IdentifyYourselfComponent } from './components/identify-yourself/identify-yourself.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { IdentifyYourselfComponent } from './components/identify-yourself/identi
     HomePageComponent,
     FooterComponent,
     MyProjectsComponent,
-    IdentifyYourselfComponent
+    IdentifyYourselfComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

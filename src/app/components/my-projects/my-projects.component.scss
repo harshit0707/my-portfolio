@@ -1,9 +1,5 @@
 @import './../../../themes/dark-theme.scss';
 
-.removeColor {
-    color: white !important;
-}
-
 .project-card {
     display: table;
     width: 100%;
@@ -31,6 +27,13 @@
     color: $primary-color;
 }
 
+.right-inner-project-card {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 0px 0px 1px 0px;
+    border-image-source: linear-gradient(to right, rgba($primary-color, 0.7), rgba($primary-color, 0));
+}
+
 @keyframes gradientBackground {
     from {opacity: 1}
     to {opacity: 0}
@@ -44,15 +47,27 @@
     }
 }
 
+.gitHubText {
+    margin-top: -7px;
+}
+
 @media only screen and (max-width: 600px) {
+    .project-card {
+        border-width: 1px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, rgba($primary-color, 0.7), rgba($primary-color, 0)) 1 100%;
+    }
     .left-project-card {
         display: block;
-        width: calc(100% - 40px);
-        max-width: calc(100% - 40px);
+        width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
     }
     .right-project-card {
         display: block;
-        width: calc(100% - 40px);
-        max-width: calc(100% - 40px);
+        width: calc(100% - 25px);
+        max-width: calc(100% - 25px);
+    }
+    .right-inner-project-card {
+        border-bottom: 0px;
     }
 }

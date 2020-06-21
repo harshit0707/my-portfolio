@@ -39,7 +39,7 @@ $first-container-height: 120vh!important;
 }
 
 .right-container {
-    background-color: $primary-color;
+    background-image: radial-gradient(rgba($primary-color, 0.8), rgba($primary-color, 1));
     padding: 40vh 0vw 10vh 10vw;
     height: $first-container-height;
 }

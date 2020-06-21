@@ -59,6 +59,11 @@ h6 {
     font-size: 15px;
 }
 
+a {
+    text-decoration: none;
+    &:visited { text-decoration: none; color: $primary-color }
+}
+
 .button {
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;

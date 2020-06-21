@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
-const USER_NAME_PATTERN = /^[A-Za-z]+[\s]*[A-Za-z]*$/;
+const USER_NAME_PATTERN = /^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$/;
 
 @Component({
   selector: 'app-identify-yourself',
@@ -26,8 +26,10 @@ export class IdentifyYourselfComponent implements OnInit {
   }
 
   captureUserInfo() {
-    if (!USER_NAME_PATTERN.test(this.visitorName)) {
-    // if (this.visitorName === null || this.visitorName === undefined || this.visitorName ==='') {
+    console.log(this.visitorName);
+    console.log(USER_NAME_PATTERN.test(this.visitorName));
+    if (this.visitorName === null || this.visitorName === undefined ||
+      !USER_NAME_PATTERN.test(this.visitorName)) {
       this.addShakeInput = true;
       this.validName = false;
       setTimeout(()=> {

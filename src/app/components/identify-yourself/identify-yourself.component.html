@@ -7,8 +7,10 @@
     </form>
     <div fxLayout="row" fxLayoutGap="25px" fxLayout.lt-sm="column" class="mtb-2"
         fxLayoutGap.lt-sm="5vh" fxLayoutAlign.lt-sm="start start">
-        <div class="button reverse-primary-button" (click)=captureUserInfo()>This is me :)</div>
-        <div class="button reverse-secondary-button" (click)=closeDialog()>Continue anonymously</div>
+        <div class="button reverse-primary-button" (click)=captureUserInfo()
+            (keydown.enter)=captureUserInfo() tabindex="0">This is me :)</div>
+        <div class="button reverse-secondary-button" (click)=closeDialog()
+            (keydown.enter)=closeDialog() tabindex="0">Continue anonymously</div>
     </div>
 </div>
 <h2 *ngIf="formFilled" class="thanks">Thanks</h2>
