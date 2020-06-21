@@ -5,10 +5,10 @@
         <div class="left-project-card p-5">
             <h4>{{project.title}}</h4>
         </div>
-        <div class="right-project-card prl-5 ptb-0">
+        <div class="right-project-card pl-5 ptb-0" [ngClass.lt-sm]="{'pr-5': true}">
             <h5 [innerHTML]="project.description"></h5>
             <h6>Technologies used: {{project.technologiesUsed}}</h6>
-            <h6>Check it out on <span class="gitHubLink">GitHub</span></h6>
+            <h6>Check it out on <span class="gitHubLink" routerLink="/#">GitHub</span></h6>
         </div>
     </div>
 </div>

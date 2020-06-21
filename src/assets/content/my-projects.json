@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Mosaic Blogging Website",
-            "description": "My first project build during college. It\"s all about blogging, blobgging and blogging.",
+            "description": "My first project build during college. It's all about blogging, blogging and blogging.",
             "technologiesUsed": "HTML, CSS, JavaScript, JQuery, PHP, phpMyAdmin, SQL",
             "githubLink": ""
         },

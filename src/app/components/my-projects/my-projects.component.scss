@@ -37,9 +37,22 @@
 }
 
 .gitHubLink {
-    padding-bottom: 0.5px;
+    padding-bottom: 1px;
     border-bottom: 1px solid rgba($primary-color, 0.5);
     &:hover {
         cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .left-project-card {
+        display: block;
+        width: calc(100% - 40px);
+        max-width: calc(100% - 40px);
+    }
+    .right-project-card {
+        display: block;
+        width: calc(100% - 40px);
+        max-width: calc(100% - 40px);
     }
 }
