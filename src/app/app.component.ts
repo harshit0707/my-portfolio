@@ -6,7 +6,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { IdentifyYourselfComponent } from './components/identify-yourself/identify-yourself.component';
 
 const POPUP_DELAY_TIME = 3000;
-const DISPLAY_SCROLL_BUTTON_AGAIN = 1500;
 
 @Component({
   selector: 'app-root',
