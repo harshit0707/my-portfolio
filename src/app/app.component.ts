@@ -20,20 +20,18 @@ export class AppComponent implements OnDestroy, OnInit {
   title = 'my-portfolio';
   rellax: any;
 
-  constructor(private router: Router, public dialog: MatDialog) {
+  constructor(private router: Router, public dialog: MatDialog) {}
+
+  ngOnInit() {
+    this.rellax = new Rellax('.rellax');
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
          this.scrollToTop();
       }
-   });
-  }
-
-  ngOnInit() {
-    this.rellax = new Rellax('.rellax');
+    });
     setTimeout(()=> {
       this.showIdentifyYourselfPopup();
     }, POPUP_DELAY_TIME);
-
   }
 
   ngOnDestroy(): void {

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import  *  as  data  from  './../../../assets/content/my-projects.json';
-import { trigger, transition, query, stagger, style, animate } from '@angular/animations';
+import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
   selector: 'app-my-projects',
@@ -8,25 +8,23 @@ import { trigger, transition, query, stagger, style, animate } from '@angular/an
   styleUrls: ['./my-projects.component.scss'],
   animations: [
     trigger('elementAnimation', [
-      transition('*=>*', [
-        query(
-          ':enter',
-          stagger(75, [
-            style({transform: 'translateY(10%)', opacity: 0}),
-            animate(
-              '1s ease-in-out',
-              style({transform: 'translateY(0%)', opacity: 1})
-            )
-          ]),
-          {optional: true}
-        )
+      state('initial', style({
+        transform: 'translateY(10%)', opacity: 0
+      })),
+      state('final', style({
+        transform: 'translateY(0%)', opacity: 1
+      })),
+      transition('initial => final', [
+        animate('1s ease-in-out')
       ])
     ])
   ]
 })
 export class MyProjectsComponent implements OnInit {
 
+  @Input('focusProjects') inFocus: boolean;
   myProjects: Array<Object>;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -36,5 +34,4 @@ export class MyProjectsComponent implements OnInit {
   initializeProjects() {
     this.myProjects = data['projects'];
   }
-
 }

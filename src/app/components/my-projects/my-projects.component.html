@@ -1,7 +1,7 @@
 <p class="section-heading mb-8">MY PROJECTS</p>
 <div class="project-card-container mrl-8 mb-8" fxLayout="column" fxLayoutGap="40px"
     fxLayoutAlign="start start" fxLayoutGap.lt-sm="10px" [ngClass.lt-sm]="{'mrl-4': true, 'mrl-8': false}">
-    <div [@elementAnimation]="50" *ngFor="let project of myProjects" class="project-card">
+    <div [@elementAnimation]="inFocus ? 'final' : 'initial'" *ngFor="let project of myProjects" class="project-card">
         <div class="left-project-card p-5">
             <h4>{{project.title}}</h4>
         </div>

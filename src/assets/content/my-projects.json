@@ -2,19 +2,19 @@
     "projects": [
         {
             "title": "Mosaic Blogging Website",
-            "description": "My first project build during college. It's all about blogging, blogging and blogging.",
+            "description": "My first project built during college. It's all about blogging, blogging and blogging :)",
             "technologiesUsed": "HTML, CSS, JavaScript, JQuery, PHP, phpMyAdmin, SQL",
             "gitHubLink": "https://github.com/harshit0707/mosaic-blogging-website"
         },
         {
-            "title": "Blockchain Healthcare System",
-            "description": "Healthcare system for patients built on ehthereum blockchain for anonymity and immutability.",
+            "title": "Blockchain Medical Records Management",
+            "description": "Medical records management system for patients, built on ehthereum blockchain.",
             "technologiesUsed": "Ganache, web3.js, Metamask, Solidity, Angular 7",
             "gitHubLink": "https://github.com/harshit0707/blockchain-medical-records"
         },
         {
             "title": "Online Portfolio",
-            "description": "The website which you are on currently!! It is work on progress.",
+            "description": "The website which you are currently on!! It is work in progress.",
             "technologiesUsed": "Angular 9, TypeScript",
             "gitHubLink": "https://github.com/harshit0707/my-portfolio"
         }
