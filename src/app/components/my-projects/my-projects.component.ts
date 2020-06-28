@@ -37,6 +37,6 @@ export class MyProjectsComponent implements OnInit {
   }
 
   sendGitHubEvent(projectTitle: string) {
-    this._gaservice.sendEvent('linkClicked', 'Github', projectTitle);
+    this._gaservice.sendEvent('linkClicked', 'Github Code', projectTitle);
   }
 }
