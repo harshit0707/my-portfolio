@@ -4,8 +4,10 @@ import { Subscription } from 'rxjs';
 import * as Rellax from 'rellax';
 import { MatDialog } from '@angular/material/dialog';
 import { IdentifyYourselfComponent } from './components/identify-yourself/identify-yourself.component';
+import { GoogleAnalyticsService } from './services/google-analytics.service';
 
 const POPUP_DELAY_TIME = 3000;
+const ANONYMOUS = 'anonymous';
 
 @Component({
   selector: 'app-root',
@@ -17,12 +19,14 @@ export class AppComponent implements OnDestroy, OnInit {
   dialogRefSubscription: Subscription;
   routerSubscription: Subscription;
   displayScrollButton = false;
-  title = 'my-portfolio';
+  name: string;
   rellax: any;
 
-  constructor(private router: Router, public dialog: MatDialog) {}
+  constructor(private router: Router, public dialog: MatDialog,
+    private _gaservice: GoogleAnalyticsService) {}
 
   ngOnInit() {
+    this.name = sessionStorage.getItem('visitorName');
     this.rellax = new Rellax('.rellax');
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -30,7 +34,9 @@ export class AppComponent implements OnDestroy, OnInit {
       }
     });
     setTimeout(()=> {
-      this.showIdentifyYourselfPopup();
+      if (!this.name) {
+        this.showIdentifyYourselfPopup();
+      }
     }, POPUP_DELAY_TIME);
   }
 
@@ -55,10 +61,13 @@ export class AppComponent implements OnDestroy, OnInit {
   }
 
   showIdentifyYourselfPopup() {
-    let dialogRef = this.dialog.open(IdentifyYourselfComponent, {
-      // height: '200px', width: '600px'
-    });
-    this.dialogRefSubscription = dialogRef.afterClosed().subscribe(result => {
+    let dialogRef = this.dialog.open(IdentifyYourselfComponent, { });
+    this.dialogRefSubscription = dialogRef.afterClosed().subscribe(name => {
+      if(!name) {
+        name = ANONYMOUS;
+      }
+      sessionStorage.setItem('visitorName', name);
+      this._gaservice.sendEvent('visitorName', 'name', name);
     });
   }
 }

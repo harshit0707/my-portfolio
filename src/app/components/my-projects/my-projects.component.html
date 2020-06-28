@@ -10,7 +10,9 @@
                 <h5 [innerHTML]="project.description"></h5>
                 <h6 [ngClass.lt-sm]="{'mt-3': true}">Technologies used: <span>{{project.technologiesUsed}}</span></h6>
                 <h6 class="gitHubText">Check it out on <span class="gitHubLink">
-                    <a href="{{project.gitHubLink}}" target="_blank">GitHub</a></span>
+                    <a href="{{project.gitHubLink}}" target="_blank"
+                        (click)="sendGitHubEvent(project.title)">GitHub
+                    </a></span>
                 </h6>
             </div>
         </div>

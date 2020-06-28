@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 const USER_NAME_PATTERN = /^[\s]*[A-Za-z]+[\s]*[A-Za-z]*[\s]*$/;
+const ANONYMOUS = 'anonymous';
 
 @Component({
   selector: 'app-identify-yourself',
@@ -21,13 +22,11 @@ export class IdentifyYourselfComponent implements OnInit {
     this.validName = true;
   }
 
-  closeDialog() {
-    this.dialogRef.close(this.visitorName);
+  closeDialog(visitorName = ANONYMOUS) {
+    this.dialogRef.close(visitorName);
   }
 
   captureUserInfo() {
-    console.log(this.visitorName);
-    console.log(USER_NAME_PATTERN.test(this.visitorName));
     if (this.visitorName === null || this.visitorName === undefined ||
       !USER_NAME_PATTERN.test(this.visitorName)) {
       this.addShakeInput = true;
@@ -39,7 +38,7 @@ export class IdentifyYourselfComponent implements OnInit {
     }
     this.formFilled = true;
     setTimeout(() => {
-      this.closeDialog();
+      this.closeDialog(this.visitorName);
     }, 1000);
   }
 }

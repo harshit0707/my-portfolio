@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import  *  as  data  from  './../../../assets/content/my-projects.json';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 @Component({
   selector: 'app-my-projects',
@@ -25,7 +26,7 @@ export class MyProjectsComponent implements OnInit {
   @Input('focusProjects') inFocus: boolean;
   myProjects: Array<Object>;
 
-  constructor() { }
+  constructor(private _gaservice: GoogleAnalyticsService) { }
 
   ngOnInit(): void {
     this.initializeProjects();
@@ -33,5 +34,9 @@ export class MyProjectsComponent implements OnInit {
 
   initializeProjects() {
     this.myProjects = data['projects'];
+  }
+
+  sendGitHubEvent(projectTitle: string) {
+    this._gaservice.sendEvent('linkClicked', 'Github', projectTitle);
   }
 }
