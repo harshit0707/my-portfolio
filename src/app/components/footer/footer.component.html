@@ -3,9 +3,9 @@
     <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutAlign="center center"
         fxLayoutGap.lt-sm="5vw" class="iconsContainer">
         <div class="iconContainer" *ngFor="let icon of iconList">
-            <a href="{{icon.link}}" target="_blank">
+            <a href="{{icon.link}}" target="_blank" (click)="sendSocialMediaEvent(icon.alternateName)">
                 <img src="{{'./../../../assets/images/' + icon.fileName + '.svg'}}"
-                alt="{{icon.alternateName}}" class="socialMediaIcon">
+                    alt="{{icon.alternateName}}" class="socialMediaIcon">
             </a>
         </div>
     </div>

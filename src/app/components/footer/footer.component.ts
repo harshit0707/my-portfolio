@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   iconList: Array<Object>;
-  constructor() { }
+  constructor(private _gaservice: GoogleAnalyticsService) { }
 
   ngOnInit() {
     this.initializeIcons();
@@ -21,6 +22,10 @@ export class FooterComponent implements OnInit {
       { 'fileName': 'linkedin-logo', 'alternateName': 'LinkedIn', 'link': 'https://www.linkedin.com/in/harshit-agrawal-2584b2157/' },
       { 'fileName': 'github-logo', 'alternateName': 'Github', 'link': 'https://github.com/harshit0707' },
     ]
+  }
+
+  sendSocialMediaEvent(socialMediaName: string) {
+    this._gaservice.sendEvent('linkClicked', 'Social Media', socialMediaName);
   }
 
 }
