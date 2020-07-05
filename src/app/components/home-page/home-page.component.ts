@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics.service';
 
 @Component({
   selector: 'app-home-page',
@@ -25,7 +26,7 @@ export class HomePageComponent implements OnInit {
   focusAboutMe: boolean;
   focusProjects: boolean;
 
-  constructor() {}
+  constructor(private _gaservice: GoogleAnalyticsService) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -44,6 +45,7 @@ export class HomePageComponent implements OnInit {
     link.href = './../../../assets/documents/Harshit Agrawal.pdf';
     link.download = 'Harshit Agrawal.pdf';
     link.dispatchEvent(new MouseEvent('click'));
+    this._gaservice.sendEvent('buttonClicked', 'Download', 'Resume');
   }
 
   @HostListener('window:scroll', ['$event'])
