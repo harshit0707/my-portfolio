@@ -38,6 +38,14 @@ export class HomePageComponent implements OnInit {
       behavior: "smooth", block: "start", inline: "nearest" });
   }
 
+  downloadResume() {
+    // window.open("./../../../assets/documents/Harshit Agrawal.pdf", '_blank');
+    let link = document.createElement('a');
+    link.href = './../../../assets/documents/Harshit Agrawal.pdf';
+    link.download = 'Harshit Agrawal.pdf';
+    link.dispatchEvent(new MouseEvent('click'));
+  }
+
   @HostListener('window:scroll', ['$event'])
   onScroll() {
     if (document.documentElement.scrollTop > 400) {

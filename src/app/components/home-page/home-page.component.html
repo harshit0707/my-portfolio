@@ -9,7 +9,7 @@
         fxLayoutAlign.lt-sm="start center">
         <div class="title">THE PORTFOLIO OF</div>
         <div class="name">HARSHIT<br>AGRAWAL</div>
-        <div class="role">AN ASPIRING WEB DEVELOPER AND DATA ANALYST</div>
+        <div class="role">WEB DEVELOPER AND AN ASPIRING DATA SCIENTIST</div>
       </div>
       <div [@elementAnimation]="inFocus ? 'final' : 'initial'" fxLayout="row" fxLayoutGap="5vw"
         fxLayout.lt-sm="column" fxLayoutGap.lt-sm="5vh"
@@ -20,8 +20,9 @@
           <img src="./../../../assets/images/down-arrow.svg" height="25px" width="30px">
         </div>
         <div class="button secondary-button" fxLayout="row" fxLayoutAlign="start start"
-          (click)="scrollToElement('footer')">
-          <span>Contact me</span>
+          (click)="downloadResume()">
+          <!-- (click)="scrollToElement('footer')" -->
+          <span>Download resume</span>
           <img src="./../../../assets/images/down-arrow-light.svg" height="25px" width="30px">
         </div>
       </div>
