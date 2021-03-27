@@ -17,6 +17,12 @@
             "description": "The website which you are currently on!! It is work in progress.",
             "technologiesUsed": "Angular 9, TypeScript",
             "gitHubLink": "https://github.com/harshit0707/my-portfolio"
+        },
+        {
+            "title": "Dimension Calculator",
+            "description": "Small frequently used handy tools made for interior designer students.",
+            "technologiesUsed": "Angular 9, TypeScript",
+            "gitHubLink": "https://github.com/harshit0707/dimension-calculator"
         }
     ]
 }
